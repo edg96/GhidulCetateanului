@@ -1,0 +1,104 @@
+/* Header general styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 0 2.4rem;
+  height: 4.8rem;
+  border-bottom: 1px thick solid #ddd;
+  box-shadow: inset 0 0 10px #ccc;
+}
+
+.logo img {
+  padding-top: 0.2rem;
+  height: 4.2rem;
+}
+
+.main-nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  gap: 2.4rem;
+}
+
+/* Header animated buttons */
+.header-button {
+  border-radius: 0.25rem;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 700;
+  padding-left: 25px;
+  padding-right: 25px;
+  color: #c4c4c4;
+  -webkit-clip-path: polygon(
+    0 0,
+    0 0,
+    100% 0,
+    100% 0,
+    100% calc(100% - 15px),
+    calc(100% - 15px) 100%,
+    15px 100%,
+    0 100%
+  );
+  clip-path: polygon(
+    0 0,
+    0 0,
+    100% 0,
+    100% 0,
+    100% calc(100% - 15px),
+    calc(100% - 15px) 100%,
+    15px 100%,
+    0 100%
+  );
+  height: 30px;
+  font-size: 1rem;
+  line-height: 14px;
+  letter-spacing: 1.2px;
+  transition: 0.2s 0.1s;
+  background-image: linear-gradient(90deg, #1100ad, #110037);
+  border: 0 solid;
+  overflow: hidden;
+}
+
+.header-button:hover {
+  cursor: pointer;
+  color: #ffd700;
+  transition: all 0.3s ease-in;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+/* Stylish links */
+a {
+  position: relative;
+  text-decoration: none;
+  color: #636363;
+  font-weight: 600;
+  font-size: 1.6rem;
+  transition: color 0.3s ease-in-out;
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 3px;
+  background-color: #18272f;
+  bottom: -3px;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #ffd700;
+}
+
+a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}

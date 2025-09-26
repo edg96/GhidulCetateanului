@@ -1,0 +1,71 @@
+/* 
+
+--- 01. Typography system ---
+
+FONT SIZES:
+- h1: 2.986rem	
+- h2:	2.488rem	
+- h3:	2.074rem	
+- h4:	1.728rem	
+- h5:	1.44rem	
+- h6:	1.2rem	
+- p: 1rem	
+- small: 0.833rem	
+- other: 0.694rem	
+
+
+FONT WEIGHTS:
+- Default: 400
+- Medium: 500
+- Semi-Bold: 600
+- Bold: 700
+
+LINE HEIGHTS:
+- Default: 1
+- Other Variants: 1.05
+- Medium: 1.2
+- Paragraphs Default: 1.5
+- Larger: 1.6 or 1.8
+
+LETTER SPACING:
+- 0.5px
+- 0.75px
+
+--- 02. Color System ---
+PRIMARY COLOR (BRAND): 
+SECONDARY COLORS (GREY):
+- #555
+- #333
+TINTS: #
+ALTERNATE BRAND COLOR (LIGHTER): 
+
+--- 03. Border Radius ---
+- Default: 9px
+- Medium: 12px
+- Large: 15px
+
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.4rem rgba(40, 46, 167, 0.3);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1;
+  font-weight: 600;
+  color: #333;
+}

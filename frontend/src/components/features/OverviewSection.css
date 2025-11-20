@@ -1,0 +1,15 @@
+.overview {
+  padding: 4.8rem 2.4rem 3.2rem 2.4rem;
+
+  background-color: #e7e7e7;
+}
+
+.overview__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: start;
+  gap: 2.4rem;
+
+  padding: 2.4rem 4.8rem;
+  margin: 0 auto;
+}

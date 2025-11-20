@@ -1,0 +1,87 @@
+.header {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 2.4rem;
+  height: 4.8rem;
+
+  border-bottom: 1px thick solid #ddd;
+
+  box-shadow: inset 0 0 10px #ccc;
+}
+
+.header__logo-img {
+  height: 4.2rem;
+  padding-top: 0.2rem;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  list-style: none;
+  gap: 2.4rem;
+}
+
+.header__link {
+  list-style: none;
+  color: inherit;
+}
+
+/* Animated buttons */
+
+.header__button {
+  height: 30px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border: 0 solid;
+
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 14px;
+  letter-spacing: 1.2px;
+  color: #c4c4c4;
+
+  background-image: linear-gradient(90deg, #1100ad, #110037);
+  box-shadow: none;
+
+  overflow: hidden;
+  -webkit-clip-path: polygon(
+    0 0,
+    0 0,
+    100% 0,
+    100% 0,
+    100% calc(100% - 15px),
+    calc(100% - 15px) 100%,
+    15px 100%,
+    0 100%
+  );
+  clip-path: polygon(
+    0 0,
+    0 0,
+    100% 0,
+    100% 0,
+    100% calc(100% - 15px),
+    calc(100% - 15px) 100%,
+    15px 100%,
+    0 100%
+  );
+
+  transition: 0.2s 0.1s;
+  border-radius: 0.25rem;
+}
+
+.header__button:hover {
+  color: #ffd700;
+
+  padding-right: 30px;
+  padding-left: 30px;
+
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}

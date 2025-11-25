@@ -1,104 +1,58 @@
-import { useRef, useEffect } from "react";
 import "./HeroSection.css";
 import "../../assets/css/utilities.css";
+import img1 from "../../assets/images/hero/undraw_choose_5kz4.svg";
+import img2 from "../../assets/images/hero/undraw_verify-data_k0y1.svg";
+import img3 from "../../assets/images/hero/undraw_respond_o54z.svg";
 
 export function HeroSection() {
-  const carouselRef = useRef<HTMLDivElement>(null);
-
-  const images: string[] = [
-    "../../src/assets/images/hero/hero_image_1.jpg",
-    "../../src/assets/images/hero/hero_image_2.jpg",
-    "../../src/assets/images/hero/hero_image_3.jpg",
-    "../../src/assets/images/hero/hero_image_4.jpg",
-    "../../src/assets/images/hero/hero_image_5.jpg",
-    "../../src/assets/images/hero/hero_image_6.jpg",
-    "../../src/assets/images/hero/hero_image_7.jpg",
-    "../../src/assets/images/hero/hero_image_8.jpg",
-  ];
-
-  useEffect(() => {
-    const carousel = carouselRef.current;
-    const scrollStep = 3;
-
-    const autoScroll = () => {
-      if (carousel) {
-        carousel.scrollTop += scrollStep;
-
-        if (carousel.scrollTop >= carousel.scrollHeight / 2) {
-          carousel.scrollTop = 0;
-        }
-      }
-    };
-
-    const intervalId = setInterval(autoScroll, 50);
-
-    return () => clearInterval(intervalId);
-  }, []);
-
   return (
-    <section className="hero">
+    <section className="hero__section">
       <div className="hero__container">
-        <div className="hero__text">
-          <div className="hero__text-box">
-            <h1 className="hero__heading">
-              Înțelege Statul, Înțelege Puterea Ta
-            </h1>
-            <p className="hero__description">
-              Aici găsești informații clare și pe înțelesul tuturor despre
-              instituțiile statului român: ce rol are Președintele, ce face
-              Senatul, care sunt responsabilitățile Guvernului și ce înseamnă,
-              de fapt, votul tău. Pentru că o societate puternică începe cu
-              cetățeni informați.
-            </p>
-            <button className="btn margin-right-sm">Începe Aici</button>
-            <button className="btn">Despre Noi</button>
-          </div>
-
-          <div className="hero__disclaimer">
-            <div className="hero__disclaimer-container">
-              <div className="hero__disclaimer-text">
-                <h1 className="hero__disclaimer-heading">
-                  Cine suntem noi si de ce avem acest proiect?
-                </h1>
-                <p className="hero__disclaimer-subheading">
-                  Acest proiect este în întregime civic și independent. Nu
-                  reprezentăm niciun partid politic și nu urmărim să influențăm
-                  opiniile cetățenilor pe o anumită direcție ideologică. Scopul
-                  nostru este să oferim informații corecte, echilibrate și ușor
-                  de înțeles despre instituțiile statului român și despre modul
-                  în care acestea funcționează. Credem că o societate
-                  democratică sănătoasă are nevoie de cetățeni bine informați,
-                  capabili să înțeleagă cine ia decizii, cum sunt acestea puse
-                  în practică și care sunt drepturile și responsabilitățile
-                  fiecăruia dintre noi. Tot conținutul pe care îl găsești aici
-                  are un singur obiectiv: să facă informația publică mai
-                  accesibilă, fără interpretări partizane și fără agendă
-                  politică.
-                </p>
-              </div>
-              <div
-                className="hero__disclaimer-image"
-                role="img"
-                aria-label="Disclaimer image"
-              ></div>
-            </div>
-          </div>
+        <div className="hero__stack">
+          <h1 className="hero__stack-heading">Alegere informată</h1>
+          <h3 className="hero__stack-title">
+            Alegerile bune se construiesc pe înțelegere, nu pe rumoare.
+          </h3>
+          <p className="hero__stack-description">
+            Într-o lume plină de opinii, zvonuri și mesaje contradictorii, ai
+            nevoie de informație clară și echilibrată pentru a decide ce crezi
+            și ce alegi. Îți oferim o privire transparentă asupra instituțiilor
+            statului și a celor care te reprezintă, ca tu să poți lua decizii în
+            cunoștință de cauză — liniștit, informat și fără presiune.
+          </p>
         </div>
-
-        <div className="hero__carousel">
-          <div className="hero__carousel-grid" ref={carouselRef}>
-            {[...images, ...images].map((src, i) => (
-              <img
-                key={i}
-                src={src}
-                alt={`Hero ${i}`}
-                className="hero__image"
-              />
-            ))}
-          </div>
-          <div className="hero__fade hero__fade--top"></div>
-          <div className="hero__fade hero__fade--bottom"></div>
+        <img key={img1} src={img1} alt="Something" />
+        <img key={img2} src={img2} alt="Something" />
+        <div className="hero__stack">
+          <h1 className="hero__stack-heading">Date verificate</h1>
+          <h3 className="hero__stack-title">
+            Când datele sunt clare, realitatea devine mai ușor de înțeles.
+          </h3>
+          <p className="hero__stack-description">
+            Îți punem la dispoziție statistici, structuri și informații
+            verificate despre politicieni, instituții și funcționarea statului.
+            Nu pentru a te influența, ci pentru a-ți oferi contextul necesar să
+            înțelegi cum stau lucrurile cu adevărat. Cu cifre reale și
+            fact-checking riguros, poți interpreta singur impactul deciziilor
+            politice asupra vieții tale.
+          </p>
         </div>
+        <div className="hero__stack">
+          <h1 className="hero__stack-heading">Dialog civic</h1>
+          <h3 className="hero__stack-title">
+            Tăcerea nu aduce schimbare — conversația, da.
+          </h3>
+          <p className="hero__stack-description">
+            Viața politică nu este un spectacol la care privim din depărtare. Ea
+            ne afectează în fiecare zi, iar înțelegerea ei ne ajută să fim
+            cetățeni mai conștienți și mai implicați. Prin informații clare și
+            discuții deschise, putem sparge cercul indiferenței și putem
+            transforma dialogul civic într-o normalitate. Totul începe cu o
+            întrebare simplă: „Ce face statul pentru mine — și ce pot face eu
+            pentru societate?”
+          </p>
+        </div>
+        <img key={img3} src={img3} alt="Something" />
       </div>
     </section>
   );

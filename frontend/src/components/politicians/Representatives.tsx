@@ -23,7 +23,9 @@ export function Representatives({ politiciansType }: RepresentativesProps) {
   const { data, isLoading, isError, error } = useQuery({
     queryKey: ["politiciansType", politiciansType],
     queryFn: async () => {
-      const res = await axios.get(`http://localhost:5000/${politiciansType}`);
+      const res = await axios.get(
+        `http://localhost:5000/api/${politiciansType}`
+      );
       return res.data;
     },
   });
@@ -139,15 +141,15 @@ export function Representatives({ politiciansType }: RepresentativesProps) {
 
   return (
     <div className="representatives">
-      <div className="description__description">
-        <h1 className="representatives__title">
+      <div className="description-text">
+        <h1 className="representatives-title">
           {politiciansType === "deputies" ? "Camera Deputatilor" : "Senatul"}
         </h1>
-        <p className="representatives__text">
+        <p className="representatives-description">
           {REPRESENTATIVES_TEXT[politiciansType].description}
         </p>
       </div>
-      <div className="representatives__charts">
+      <div>
         <Stack
           direction={{ xs: "column", md: "row" }}
           spacing={2}

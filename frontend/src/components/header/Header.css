@@ -4,6 +4,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  z-index: 10;
 
   height: 4.8rem;
   padding: 0 2.4rem;
@@ -12,78 +14,91 @@
   background: white;
 }
 
-.header__nav {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
+.header__logo-img {
+  height: 2.4rem;
+}
 
+.header__menu-toggle {
+  background: transparent;
+  border: none;
+  color: #777777;
+
+  cursor: pointer;
+}
+
+.drawer-backdrop {
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  inset: 0;
+
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(2px);
+}
+
+.drawer {
+  background: linear-gradient(135deg, #ffffff 0%, #f2f2f2 40%, #dedede 100%);
+  width: 70%;
+  max-width: 340px;
+  height: 100dvh;
+  padding: 2.4rem;
+
+  display: flex;
+  flex-direction: column;
+
+  animation: drawer-slide 0.35s ease forwards;
+  transform: translateX(100%);
+}
+
+@keyframes drawer-slide {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.drawer__close {
+  display: flex;
+  justify-content: flex-end;
+  background: transparent;
+  border: none;
+}
+
+.drawer__nav-list {
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4.8rem;
   list-style: none;
 }
 
-.header__logo-img {
-  height: 4rem;
-}
+.drawer__buttons-container {
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+  padding-top: 2rem;
 
-/* Link Styling */
-
-.header__link a {
-  display: inline-block;
-  position: relative;
-
-  padding: 0.25rem 0;
-
-  font-weight: 500;
-  text-decoration: none;
-  color: #333;
-}
-
-.header__link a::after {
-  position: absolute;
-  left: 0;
-  bottom: -3px;
-
-  height: 2px;
-  width: 0%;
-
-  background: #0066ff;
-
-  content: "";
-
-  transition: width 0.25s ease;
-}
-
-.header__link a:hover::after {
-  width: 100%;
-}
-
-/* Button Styling */
-
-.header__button {
   display: flex;
+  justify-content: center;
+  gap: 4.6rem;
+}
+
+.drawer__button {
+  padding: 0.8rem 1.8rem;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  border: none;
+  outline: none;
+  transition: all 0.25s ease;
+  letter-spacing: 0.3px;
+
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-
-  height: 2.3rem;
-  padding: 0.55rem 1.3rem;
-  border: none;
-  border-radius: 0.6rem;
-
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: rgb(255, 255, 255);
-
-  background: #004dc0;
-
-  cursor: pointer;
-  transition: background 0.25s ease, transform 0.15s ease;
-}
-
-.header__button:hover {
-  background: #0050cc;
-
-  transform: translateY(-1px);
-}
-
-.header__button:active {
-  transform: translateY(0);
 }

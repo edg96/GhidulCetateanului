@@ -1,147 +1,81 @@
-/* Text Styling */
-
-.institution__title {
-  text-align: center;
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #222;
-}
-
-.institution__description {
-  padding: 1.6rem;
-  font-size: 1.4rem;
-  color: #333;
-}
-
-/* Link Styling */
-
-.institution__website-link {
-  text-align: center;
-}
-
-/* Icon Styling */
-
-.institution__icon {
-  height: 24px;
-  width: 24px;
-  min-height: 24px;
-  min-width: 24px;
-}
-
-.institution__icon-text {
+.collapsible {
   display: flex;
   align-items: center;
-  overflow-wrap: anywhere;
-  gap: 0.8rem;
+  gap: 1.6rem;
 
-  font-size: 1.4rem;
-  color: #333;
-}
-
-/* Flip Card Styling */
-
-.flip__card {
-  width: 250px;
-}
-
-.flip__card-inner {
-  position: relative;
-
+  background-color: #e2e2e2;
+  color: #444;
+  cursor: pointer;
+  padding: 1.6rem;
   width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 
-  transform-style: preserve-3d;
-  transition: transform 0.8s;
+  font-size: 1.6rem;
+  line-height: 1.15;
+  font-weight: 600;
 }
 
-.flip__card:hover .flip__card-inner {
-  transform: rotateY(180deg);
+.active,
+.collapsible:hover {
+  background-color: #ccc;
 }
 
-.flip__card-front,
-.flip__card-back {
-  position: absolute;
-
-  inset: 0;
-
-  backface-visibility: hidden;
+.content {
+  overflow: hidden;
+  height: 0;
+  transition: height 0.35s ease;
+  background-color: #f1f1f1;
 }
 
-/* Front */
+.content.active {
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
 
-.flip__card-front {
+.collapsible-text {
+  font-size: 1.6rem;
+  line-height: 1.15;
+  font-weight: 500;
+  padding: 1.4rem;
+  color: #5a5a5a;
+}
+
+.collapsible svg {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.collapsible-address svg,
+.collapsible-send-to-page svg,
+.collapsible-website-text svg {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.collapsible-address,
+.collapsible-send-to-page,
+.collapsible-website-text {
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-
-  padding-top: 40px;
-
-  color: black;
-
-  background-color: #dedede;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.front__content {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
-  gap: 2.4rem;
-
-  padding: 1.6rem;
+  gap: 1.6rem;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: 500;
+  padding: 1.4rem;
+  color: #626262;
 }
 
-/* Back */
-
-.flip__card-back {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-
-  padding-top: 40px;
-
-  background-color: #d8d8d8;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
-  transform: rotateY(180deg);
-}
-
-.back__content {
-  padding: 0 1.6rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-
-  height: 100%;
-  box-sizing: border-box;
-}
-
-/* Badge */
-
-.card__badge {
+.collapsible-website {
   display: flex;
   justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: -24px;
-  left: 50%;
-
-  height: 48px;
-  width: 48px;
-  border: 2px solid #ddd;
-  border-radius: 50%;
-
-  background: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-
-  transform: translateX(-50%);
-}
-
-.card__badge-icon {
-  flex-shrink: 0;
-
-  height: 24px;
-  width: 24px;
-
-  color: black;
+  font-size: 1.8rem;
+  line-height: 1.05;
+  font-weight: 600;
+  padding: 2.4rem 0;
 }

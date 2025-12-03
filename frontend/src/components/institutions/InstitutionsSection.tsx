@@ -1,4 +1,5 @@
 import "./InstitutionsSection.css";
+import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { Institution } from "./Institution";
@@ -29,6 +30,8 @@ async function fetchInstitutionsAndCategories(): Promise<{
 }
 
 export function InstitutionsSection() {
+  const [filter, setFilter] = useState<string>("layers");
+
   const { data, isLoading, isError, error } = useQuery({
     queryKey: ["institutions-and-categories"],
     queryFn: fetchInstitutionsAndCategories,
@@ -119,33 +122,43 @@ export function InstitutionsSection() {
 
       <div className="institutions__section-navbar">
         <button className="institutions__section-btn">
-          <Layers />
+          <Layers onClick={() => setFilter("layers")} />
         </button>
         <button className="institutions__section-btn">
-          <Landmark />
+          <Landmark onClick={() => setFilter("constitutional_institutions")} />
         </button>
         <button className="institutions__section-btn">
-          <Vote />
+          <Vote
+            onClick={() => setFilter("election_and_democracy_institutions")}
+          />
         </button>
         <button className="institutions__section-btn">
-          <Briefcase />
+          <Briefcase onClick={() => setFilter("executive_branch")} />
         </button>
         <button className="institutions__section-btn">
-          <ShieldCheck />
+          <ShieldCheck
+            onClick={() => setFilter("independent_authorities_and_agencies")}
+          />
         </button>
         <button className="institutions__section-btn">
-          <Gavel />
+          <Gavel onClick={() => setFilter("judiciary_and_oversight")} />
         </button>
         <button className="institutions__section-btn">
-          <Building />
+          <Building onClick={() => setFilter("ministries")} />
         </button>
         <button className="institutions__section-btn">
-          <Shield />
+          <Shield
+            onClick={() => setFilter("security_and_defense_institutions")}
+          />
         </button>
       </div>
       <div className="institutions__section-grid">
         {data?.institutions!.map((institution) => (
-          <Institution key={institution._id} data={institution} />
+          <Institution
+            key={institution._id}
+            data={institution}
+            filter={filter}
+          />
         ))}
       </div>
     </section>

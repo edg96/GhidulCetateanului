@@ -53,8 +53,6 @@ export function Representatives({ politiciansType }: RepresentativesProps) {
       );
   }, [politicians]);
 
-  console.log(totalNumOfPoltiticians);
-
   const chartColors = politicalParties.map(
     (party) => PARTY_COLORS[party] || "#000000ff"
   );
@@ -148,6 +146,42 @@ export function Representatives({ politiciansType }: RepresentativesProps) {
         <p className="representatives-description">
           {REPRESENTATIVES_TEXT[politiciansType].description}
         </p>
+        <div className="table__wrapper">
+          <table>
+            <caption>
+              Numar total de{" "}
+              {politiciansType === "deputies" ? "deputati" : "senatori"} pe
+              partide
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Partid</th>
+                <th scope="col">
+                  Numar de{" "}
+                  {politiciansType === "deputies" ? "deputati" : "senatori"}
+                </th>
+                <th scope="col">Procentaj</th>
+              </tr>
+            </thead>
+            <tbody className="representatives-proportion">
+              {politicians &&
+                totalNumOfPoltiticians &&
+                Array.from(politicians, ([party, politiciansCount]) => (
+                  <tr>
+                    <th scope="row" key={party} className="proportion-item">
+                      {party}
+                    </th>
+                    <th>{politiciansCount}</th>
+                    <th>
+                      {`${Number(
+                        (politiciansCount / totalNumOfPoltiticians) * 100
+                      ).toFixed(2)}%`}
+                    </th>
+                  </tr>
+                ))}
+            </tbody>
+          </table>
+        </div>
       </div>
       <div>
         <Stack

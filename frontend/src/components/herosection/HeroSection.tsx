@@ -20,9 +20,8 @@ export function HeroSection() {
             statului și a celor care te reprezintă, ca tu să poți lua decizii în
             cunoștință de cauză — liniștit, informat și fără presiune.
           </p>
+          <img key={img1} src={img1} alt="Something" />
         </div>
-        <img key={img1} src={img1} alt="Something" />
-        <img key={img2} src={img2} alt="Something" />
         <div className="hero__stack">
           <h1 className="hero__stack-heading">Date verificate</h1>
           <h3 className="hero__stack-title">
@@ -36,6 +35,7 @@ export function HeroSection() {
             fact-checking riguros, poți interpreta singur impactul deciziilor
             politice asupra vieții tale.
           </p>
+          <img key={img2} src={img2} alt="Something" />
         </div>
         <div className="hero__stack">
           <h1 className="hero__stack-heading">Dialog civic</h1>

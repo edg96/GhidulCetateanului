@@ -10,7 +10,7 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.entity__title {
+.entity__heading {
   font-size: 2.4rem;
   line-height: 1.05;
   font-weight: 600;
@@ -31,9 +31,9 @@
   color: #3b3b3b;
 }
 
-.entity__responsibilities {
-  margin: 1.6rem;
-  padding: 2.4rem 1.6rem;
+.entity__groups {
+  margin: 1.2rem;
+  padding: 1.6rem 0.4rem;
   border-radius: 12px;
 
   font-size: 1.6rem;
@@ -51,6 +51,12 @@
 
   height: 100%;
   padding: 0 1.6rem;
+}
+
+.entity__ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
 }
 
 .entity__list-title {

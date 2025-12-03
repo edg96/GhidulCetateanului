@@ -20,14 +20,14 @@ export function PoliticalEntity({
 }: PoliticalEntityProps) {
   return (
     <article className="entity">
-      <h1 className="entity__title">
+      <h1 className="entity__heading">
         <IoInformationCircleSharp className="entity__icon" />
         {title}
       </h1>
       <p className="entity__description">{description}</p>
 
       {/* Can Do */}
-      <section className="entity__responsibilities">
+      <section className="entity__groups">
         <div className="entity__responsibilities-container">
           <div className="entity__list entity__list--can">
             <h3 className="entity__list-title">Ce poate să facă {title}:</h3>

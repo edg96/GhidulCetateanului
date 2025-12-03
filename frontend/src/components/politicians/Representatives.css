@@ -1,13 +1,13 @@
 /* Representatives Styling */
 
 .representatives {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 9.6rem;
+  gap: 2.4rem;
 
   margin-bottom: 4.8rem;
-  padding: 4.8rem;
+  padding: 1.2rem;
   border-radius: 1.6rem;
 
   box-shadow: 0 0 1.6rem rgba(0, 0, 0, 0.1);
@@ -34,4 +34,41 @@
   font-size: 1.6rem;
   line-height: 1.5;
   color: #333;
+  padding-bottom: 2.4rem;
+}
+
+.table__wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* Table */
+
+table {
+  font-size: 1.6rem;
+  border-collapse: collapse;
+  border: 2px solid #7890d0;
+  background-color: #ffffff;
+}
+
+caption {
+  caption-side: top;
+  padding-bottom: 1.2rem;
+  font-weight: 600;
+  color: #243a73;
+}
+
+thead {
+  background-color: #3a57c4;
+  color: #ffffff;
+}
+
+th,
+td {
+  border: 1px solid #7890d0;
+  padding: 0.6rem 1rem;
+}
+
+tbody > tr:nth-of-type(even) {
+  background-color: #c9d5ff;
 }

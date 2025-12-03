@@ -28,7 +28,7 @@ export function RepresentativesSection() {
           partide, cu linkuri catre profilurile individuale ale fiecarui
           reprezentant.
         </h2>
-        <button className="btn">Vezi Lista Politcienilor</button>
+        <button className="btn btn-full">Vezi Lista Politcienilor</button>
       </div>
     </section>
   );

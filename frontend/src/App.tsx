@@ -5,6 +5,7 @@ import { HeroSection } from "./components/herosection/HeroSection";
 import { OverviewSection } from "./components/features/OverviewSection";
 import { RepresentativesSection } from "./components/politicians/RepresentativesSection";
 import { InstitutionsSection } from "./components/institutions/InstitutionsSection";
+import { Footer } from "./components/footer/Footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <OverviewSection />
       <RepresentativesSection />
       <InstitutionsSection />
+      <Footer />
     </>
   );
 }

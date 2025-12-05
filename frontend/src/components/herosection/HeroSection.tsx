@@ -6,7 +6,7 @@ import img3 from "../../assets/images/hero/undraw_respond_o54z.svg";
 
 export function HeroSection() {
   return (
-    <section className="hero__section">
+    <section className="hero">
       <div className="hero__container">
         <div className="hero__stack">
           <h1 className="hero__stack-heading">Alegere informată</h1>

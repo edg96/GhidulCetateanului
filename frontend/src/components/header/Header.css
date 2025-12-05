@@ -102,3 +102,43 @@
   align-items: center;
   justify-content: center;
 }
+
+/* Links Styling */
+
+.drawer__link {
+  position: relative;
+
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: #636363;
+  text-decoration: none;
+
+  transition: color 0.3s ease-in-out;
+}
+
+.drawer__link::before {
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+
+  height: 2px;
+  width: 100%;
+  border-radius: 3px;
+
+  content: "";
+
+  background-color: #18272f;
+
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-in-out;
+}
+
+.drawer__link:hover {
+  color: #ffd700;
+}
+
+.drawer__link:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}

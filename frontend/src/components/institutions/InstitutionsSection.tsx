@@ -22,8 +22,8 @@ async function fetchInstitutionsAndCategories(): Promise<{
   categories: string[];
 }> {
   const [institutionsRes, categoriesRes] = await Promise.all([
-    axios.get("http://localhost:5000/api/institutions"),
-    axios.get("http://localhost:5000/api/institutions/categories"),
+    axios.get("http://192.168.1.133:5000/api/institutions"),
+    axios.get("http://192.168.1.133:5000/api/institutions/categories"),
   ]);
 
   return { institutions: institutionsRes.data, categories: categoriesRes.data };
@@ -48,29 +48,29 @@ export function InstitutionsSection() {
   }
 
   return (
-    <section className="institutions__section">
-      <div className="institutions__section-header">
-        <h1 className="institutions__section-title">
+    <section className="institutions">
+      <div className="institutions__header">
+        <h1 className="institutions__title">
           Instituțiile Publice din România
         </h1>
 
-        <p className="institutions__section-subtitle">
+        <p className="institutions__subtitle">
           Această secțiune îți oferă un ghid complet al instituțiilor publice
           din România, explicate într-un limbaj simplu și concret. Scopul nostru
           este să te ajutăm să înțelegi cum funcționează statul, ce
           responsabilități are fiecare instituție și cum îți influențează în mod
           direct viața — prin servicii, decizii sau politici publice.
         </p>
-        <p className="institutions__section-subtitle">
+        <p className="institutions__subtitle">
           Fiecare instituție este prezentată printr-un card interactiv, conceput
           pentru a-ți oferi informația într-un mod clar și ușor de parcurs:
         </p>
 
-        <p className="institutions__section-subtitle">
+        <p className="institutions__subtitle">
           <strong>Pe fața cardului</strong>, găsești:
         </p>
 
-        <ul className="institutions__section-categories-list">
+        <ul className="institutions__categories-list">
           <li>denumirea instituției</li>
           <li>o descriere scurtă, concretă și ușor de înțeles a rolului său</li>
           <li>
@@ -80,14 +80,14 @@ export function InstitutionsSection() {
           <li>ce servicii oferă sau ce domenii reglementează</li>
         </ul>
 
-        <p className="institutions__section-subtitle">
+        <p className="institutions__subtitle">
           <strong>
             <strong>Pe spatele cardului</strong>, ai informațiile suplimentare
             și utile în practică:
           </strong>
         </p>
 
-        <ul className="institutions__section-categories-list">
+        <ul className="institutions__categories-list">
           <li>link direct către site-ul oficial al instituției (clickabil)</li>
           <li>adresa exactă, în format text, pentru a putea copia rapid</li>
           <li>
@@ -96,11 +96,11 @@ export function InstitutionsSection() {
           </li>
         </ul>
 
-        <p className="institutions__section-subtitle">
+        <p className="institutions__subtitle">
           Această pagină detaliată conține explicații mult mai ample despre:
         </p>
 
-        <ul className="institutions__section-categories-list">
+        <ul className="institutions__categories-list">
           <li>atribuțiile și responsabilitățile concrete ale instituției</li>
           <li>
             modul în care activitatea ei afectează cetățeanul și societatea
@@ -112,7 +112,7 @@ export function InstitutionsSection() {
           </li>
         </ul>
 
-        <p className="institutions__section-subtitle">
+        <p className="institutions__subtitle">
           Acest ghid este creat pentru a fi util oricui: cetățeni care vor
           răspunsuri rapide, persoane active civic, elevi sau studenți care
           învață despre instituțiile statului, cât și profesioniști care au
@@ -120,39 +120,39 @@ export function InstitutionsSection() {
         </p>
       </div>
 
-      <div className="institutions__section-navbar">
-        <button className="institutions__section-btn">
+      <div className="institutions__navbar">
+        <button className="institutions__btn">
           <Layers onClick={() => setFilter("layers")} />
         </button>
-        <button className="institutions__section-btn">
+        <button className="institutions__btn">
           <Landmark onClick={() => setFilter("constitutional_institutions")} />
         </button>
-        <button className="institutions__section-btn">
+        <button className="institutions__btn">
           <Vote
             onClick={() => setFilter("election_and_democracy_institutions")}
           />
         </button>
-        <button className="institutions__section-btn">
+        <button className="institutions__btn">
           <Briefcase onClick={() => setFilter("executive_branch")} />
         </button>
-        <button className="institutions__section-btn">
+        <button className="institutions__btn">
           <ShieldCheck
             onClick={() => setFilter("independent_authorities_and_agencies")}
           />
         </button>
-        <button className="institutions__section-btn">
+        <button className="institutions__btn">
           <Gavel onClick={() => setFilter("judiciary_and_oversight")} />
         </button>
-        <button className="institutions__section-btn">
+        <button className="institutions__btn">
           <Building onClick={() => setFilter("ministries")} />
         </button>
-        <button className="institutions__section-btn">
+        <button className="institutions__btn">
           <Shield
             onClick={() => setFilter("security_and_defense_institutions")}
           />
         </button>
       </div>
-      <div className="institutions__section-grid">
+      <div className="institutions__grid">
         {data?.institutions!.map((institution) => (
           <Institution
             key={institution._id}

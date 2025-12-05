@@ -1,0 +1,75 @@
+.fake-news-guide {
+  padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  background-color: rgb(199, 199, 199);
+}
+
+.fake-news-guide .fake-news__image {
+  width: 260px;
+  display: block;
+  margin: 0 auto 1.2rem;
+  opacity: 0.95;
+}
+
+.fake-news-guide .fake-news__title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: -0.4px;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.fake-news__question {
+  font-size: 1.9rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.3rem;
+  color: #111827;
+  letter-spacing: -0.3px;
+}
+
+.fake-news__answer {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #374151;
+  margin-left: 0.5rem;
+  max-width: 75ch;
+  line-height: 1.65;
+}
+
+.fake-news__checklist {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.fake-news__checklist li {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #1f2937;
+  padding-left: 1.8rem;
+  position: relative;
+  line-height: 1.4;
+}
+
+.fake-news__checklist li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 10px;
+  height: 10px;
+  background-color: #2563eb;
+  border-radius: 50%;
+  opacity: 0.85;
+}
+
+.fake-news-guide > *:not(:last-child) {
+  margin-bottom: 0.5rem;
+}

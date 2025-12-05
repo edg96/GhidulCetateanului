@@ -1,9 +1,5 @@
 import "./PoliticalEntity.css";
-import {
-  IoCheckmarkCircleOutline,
-  IoCloseCircleOutline,
-  IoInformationCircleSharp,
-} from "react-icons/io5";
+import { BookText, CheckCheck, X } from "lucide-react";
 
 type PoliticalEntityProps = {
   title: string;
@@ -21,46 +17,38 @@ export function PoliticalEntity({
   return (
     <article className="entity">
       <h1 className="entity__heading">
-        <IoInformationCircleSharp className="entity__icon" />
+        <BookText className="entity__icon" />
         {title}
       </h1>
       <p className="entity__description">{description}</p>
 
-      {/* Can Do */}
       <section className="entity__groups">
-        <div className="entity__responsibilities-container">
-          <div className="entity__list entity__list--can">
-            <h3 className="entity__list-title">Ce poate să facă {title}:</h3>
-            <ul className="entity__ul">
-              {canDo.map((item, index) => (
-                <li className="entity__li" key={index}>
-                  <IoCheckmarkCircleOutline
-                    className="entity__icon"
-                    color="#27ae60"
-                    size={25}
-                  />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className="entity__group entity__group--can">
+          <h3 className="entity__group-title">Ce poate să facă {title}:</h3>
+          <ul className="entity__items">
+            {canDo.map((item, index) => (
+              <li key={index}>
+                <CheckCheck
+                  className="entity__icon"
+                  color="#27ae60"
+                  size={24}
+                />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
 
-          {/* Cannot Do */}
-          <div className="entity__list entity__list--cannot">
-            <h3 className="entity__list-title">Ce nu poate să facă {title}:</h3>
-            <ul className="entity__ul">
-              {cannotDo.map((item, index) => (
-                <li className="entity__li" key={index}>
-                  <IoCloseCircleOutline
-                    className="entity__icon"
-                    color="#c0392b"
-                    size={25}
-                  />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className="entity__group entity__group--cannot">
+          <h3 className="entity__group-title">Ce nu poate să facă {title}:</h3>
+          <ul className="entity__items">
+            {cannotDo.map((item, index) => (
+              <li key={index}>
+                <X className="entity__icon" color="#c0392b" size={24} />
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
     </article>

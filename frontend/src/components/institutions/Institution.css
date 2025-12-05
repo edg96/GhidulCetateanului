@@ -1,4 +1,4 @@
-.collapsible {
+.institution__collapsible {
   display: flex;
   align-items: center;
   gap: 1.6rem;
@@ -19,24 +19,23 @@
   font-weight: 600;
 }
 
-.active,
-.collapsible:hover {
+.institution__collapsible:hover {
   background-color: #ccc;
 }
 
-.content {
+.institution__content {
   overflow: hidden;
   height: 0;
   transition: height 0.35s ease;
   background-color: #f1f1f1;
 }
 
-.content.active {
+.institution__content--active {
   overflow: hidden;
   background-color: #f1f1f1;
 }
 
-.collapsible-text {
+.institution__text {
   font-size: 1.6rem;
   line-height: 1.15;
   font-weight: 500;
@@ -44,23 +43,23 @@
   color: #5a5a5a;
 }
 
-.collapsible svg {
+.institution__collapsible svg {
   flex-shrink: 0;
   width: 24px;
   height: 24px;
 }
 
-.collapsible-address svg,
-.collapsible-send-to-page svg,
-.collapsible-website-text svg {
+.institution__address svg,
+.institution__send-to-page svg,
+.institution__website-text svg {
   flex-shrink: 0;
   width: 20px;
   height: 20px;
 }
 
-.collapsible-address,
-.collapsible-send-to-page,
-.collapsible-website-text {
+.institution__address,
+.institution__send-to-page,
+.institution__website-text {
   display: flex;
   align-items: center;
   gap: 1.6rem;
@@ -71,7 +70,7 @@
   color: #626262;
 }
 
-.collapsible-website {
+.institution__website {
   display: flex;
   justify-content: center;
   font-size: 1.8rem;

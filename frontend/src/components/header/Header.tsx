@@ -3,6 +3,7 @@ import "./Header.css";
 import "../../assets/css/utilities.css";
 import logo from "../../assets/images/logo.png";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export function Header() {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
@@ -34,30 +35,38 @@ export function Header() {
 
             <ul className="drawer__nav-list">
               <li>
-                <a className="drawer__link" href="/about">
-                  Institutii
-                </a>
+                <Link className="drawer__link" to="/">
+                  Acasa
+                </Link>
               </li>
               <li>
-                <a className="drawer__link" href="/contact">
+                <Link className="drawer__link" to="/fake-news">
+                  Fake News
+                </Link>
+              </li>
+              <li>
+                <Link className="drawer__link" to="/contact">
                   Forum
-                </a>
+                </Link>
               </li>
               <li>
-                <a className="drawer__link" href="/about">
+                <Link className="drawer__link" to="/about">
                   Sugestii
-                </a>
+                </Link>
               </li>
               <li>
-                <a className="drawer__link" href="/about">
+                <Link className="drawer__link" to="/about-us">
                   Despre Noi
-                </a>
+                </Link>
               </li>
             </ul>
 
             <div className="drawer__buttons-container">
               <button className="btn btn-full">Logare</button>
-              <button className="btn btn-outline">Inregistrare</button>
+
+              <Link className="btn btn-outline" to="/sing-up">
+                Inregistrare
+              </Link>
             </div>
           </nav>
         </div>

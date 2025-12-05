@@ -1,0 +1,165 @@
+/* About Us Styling */
+
+.about-us {
+  background-color: #f4f4f4;
+  color: #333;
+  font-family: system-ui, sans-serif;
+}
+
+/* Header Styling */
+
+.about-us__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.4rem;
+
+  padding: 4rem 2rem;
+
+  background: linear-gradient(135deg, #1e1e1e 0%, #3e3e3e 50%, #6f6f6f 100%);
+  color: #f1f1f1;
+
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.about-us__title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.about-us__description {
+  max-width: 60ch;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.55;
+  opacity: 0.9;
+}
+
+/* Mission Styling */
+
+.about-us__mission {
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+
+  background-color: #ffffff;
+  border-radius: 10px;
+  max-width: 900px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.about-us__mission-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.about-us__mission-description {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Values Styling */
+
+.about-us__values {
+  padding: 4rem 2rem;
+}
+
+.about-us__values-title--center {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.about-us__values-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.about-us__values-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.about-us__values-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.about-us__values-title {
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 2.4rem;
+}
+
+.about-us__values-text {
+  font-size: 1.5rem;
+  line-height: 1.55;
+  color: #555;
+}
+
+/* Story Styling */
+
+.about-us__story {
+  max-width: 900px;
+  background: #ffffff;
+  padding: 3rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.about-us__story-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  color: #222;
+}
+
+.about-us__story .about-us__description {
+  margin-bottom: 1.4rem;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* CTA Styling */
+
+.about-us__cta {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #d7d7d7, #eeeeee);
+  border-radius: 15px;
+  max-width: 900px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.about-us__cta-title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.about-us__cta-text {
+  font-size: 1.7rem;
+  font-weight: 500;
+  line-height: 1.55;
+  color: #333;
+}
+
+.about-us__cta-image {
+  margin-top: 2.4rem;
+  width: 300px;
+  max-width: 100%;
+}

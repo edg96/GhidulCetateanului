@@ -1,17 +1,17 @@
 /* Institutions Section Styling */
 
-.institutions__section {
-  padding: 2.4rem 4.8rem;
+.institutions {
+  padding: 1.2rem 2.4rem;
 
   background-color: #e7e7e7;
 }
 
-.institutions__section-header {
+.institutions__header {
   padding-bottom: 3.2rem;
   border-bottom: 2px solid #ccc;
 }
 
-.institutions__section-grid {
+.institutions__grid {
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
@@ -21,7 +21,7 @@
 
 /* Text Styling */
 
-.institutions__section-title {
+.institutions__title {
   font-size: 3rem;
   font-weight: 700;
   color: #222;
@@ -29,7 +29,7 @@
   margin-bottom: 2rem;
 }
 
-.institutions__section-subtitle {
+.institutions__subtitle {
   font-size: 1.7rem;
   line-height: 2.6rem;
   color: #444;
@@ -40,7 +40,7 @@
 
 /* Navbar Styling */
 
-.institutions__section-navbar {
+.institutions__navbar {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.2rem;
@@ -56,13 +56,13 @@
   backdrop-filter: blur(12px);
 }
 
-.institutions__section-navbar svg {
+.institutions__navbar svg {
   color: #575757;
 
   opacity: 0.9;
 }
 
-.institutions__section-navbar svg:hover {
+.institutions__navbar svg:hover {
   opacity: 1;
 
   transform: scale(1.1);
@@ -70,7 +70,7 @@
 
 /* List Styling */
 
-ul.institutions__section-categories-list {
+ul.institutions__categories-list {
   list-style-type: disc;
   padding-left: 2.4rem;
 
@@ -84,7 +84,7 @@ ul.institutions__section-categories-list {
 
 /* Button Styling */
 
-.institutions__section-btn {
+.institutions__btn {
   display: flex;
   align-items: center;
 

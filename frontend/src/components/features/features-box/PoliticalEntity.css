@@ -41,37 +41,33 @@
   font-weight: 600;
 
   background-color: #e8e8e8;
-}
 
-.entity__responsibilities-container {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   gap: 2.4rem;
-
-  height: 100%;
-  padding: 0 1.6rem;
+  padding: 1.6rem;
 }
 
-.entity__ul {
+.entity__items {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
 }
 
-.entity__list-title {
+.entity__group-title {
   padding-bottom: 1.2rem;
 }
 
-.entity__list--can {
+.entity__group--can {
   color: #005e27;
 }
 
-.entity__list--cannot {
+.entity__group--cannot {
   color: #c0392b;
 }
 
-.entity__ul {
+.entity__items {
   list-style: none;
 }
 

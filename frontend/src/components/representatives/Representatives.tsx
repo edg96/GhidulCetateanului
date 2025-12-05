@@ -24,7 +24,7 @@ export function Representatives({ politiciansType }: RepresentativesProps) {
     queryKey: ["politiciansType", politiciansType],
     queryFn: async () => {
       const res = await axios.get(
-        `http://localhost:5000/api/${politiciansType}`
+        `http://192.168.1.133:5000/api/${politiciansType}`
       );
       return res.data;
     },
@@ -139,14 +139,15 @@ export function Representatives({ politiciansType }: RepresentativesProps) {
 
   return (
     <div className="representatives">
-      <div className="description-text">
-        <h1 className="representatives-title">
+      <div className="description__text">
+        <h1 className="representatives__title">
           {politiciansType === "deputies" ? "Camera Deputatilor" : "Senatul"}
         </h1>
-        <p className="representatives-description">
+        <p className="representatives__description">
           {REPRESENTATIVES_TEXT[politiciansType].description}
         </p>
-        <div className="table__wrapper">
+
+        <div className="representatives__table-wrapper">
           <table>
             <caption>
               Numar total de{" "}
@@ -163,12 +164,12 @@ export function Representatives({ politiciansType }: RepresentativesProps) {
                 <th scope="col">Procentaj</th>
               </tr>
             </thead>
-            <tbody className="representatives-proportion">
+            <tbody>
               {politicians &&
                 totalNumOfPoltiticians &&
                 Array.from(politicians, ([party, politiciansCount]) => (
                   <tr>
-                    <th scope="row" key={party} className="proportion-item">
+                    <th scope="row" key={party}>
                       {party}
                     </th>
                     <th>{politiciansCount}</th>
@@ -183,6 +184,7 @@ export function Representatives({ politiciansType }: RepresentativesProps) {
           </table>
         </div>
       </div>
+
       <div>
         <Stack
           direction={{ xs: "column", md: "row" }}

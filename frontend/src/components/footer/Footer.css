@@ -1,5 +1,5 @@
 .footer {
-  background-color: #cfcfcf;
+  background-color: #ededed;
 }
 
 .footer__disclaimer {
@@ -8,4 +8,28 @@
   font-size: 1.4rem;
   line-height: 1.15;
   color: #6d6d6d;
+}
+
+.sing-up__title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #444;
+}
+
+.sing-up__description {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #333;
+  padding-bottom: 1.2rem;
+}
+.sing-up__image {
+  min-width: 75%;
+  width: 90%;
+  align-self: center;
+}
+
+.sing-up__label {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #555;
 }

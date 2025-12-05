@@ -1,0 +1,34 @@
+.sing-up {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+
+  padding: 2.4rem;
+
+  background-color: #f9f9f9;
+}
+
+.sing-up__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+input[type="text"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"]:hover {
+  color: blue;
+  background-color: #f9f9f9;
+  box-shadow: 1.2rem 1.2rem 0.4rem lightblue;
+  border-radius: 9px;
+}

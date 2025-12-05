@@ -34,23 +34,32 @@ export function Institution({ data, filter }: InstitutionProps) {
   if (filter != "layers" && filter != data.category) return null;
 
   return (
-    <div className="institution_collapsible">
-      <button type="button" className="collapsible" onClick={toggleCollapsible}>
+    <div className="institution">
+      <button
+        type="button"
+        className="institution__collapsible"
+        onClick={toggleCollapsible}
+      >
         <Icon /> {data.name}
       </button>
-      <div className={`content ${visible ? "active" : ""}`} ref={contentRef}>
-        <p className="collapsible-text">{data.description}</p>
-        <p className="collapsible-address">
+      <div
+        className={`institution__content ${
+          visible ? "institution__content--active" : ""
+        }`}
+        ref={contentRef}
+      >
+        <p className="institution__text">{data.description}</p>
+        <p className="institution__address">
           <MapPinHouse /> {data.address}
         </p>
-        <p className="collapsible-website-text">
+        <p className="institution__website-text">
           <Info /> {data.website}
         </p>
-        <a className="collapsible-send-to-page">
+        <a className="institution__send-to-page">
           <SendHorizontal /> Afla mai multe informatii pe pagina dedicata a
           site-ului nostru
         </a>
-        <a className="collapsible-website" href={data.website}>
+        <a className="institution__website" href={data.website}>
           Viziteaza site-ul oficial
         </a>
       </div>

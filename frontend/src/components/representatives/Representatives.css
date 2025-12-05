@@ -14,14 +14,14 @@
   background-color: #cbcbcb;
 }
 
-.representatives-text {
+.representatives__text {
   display: flex;
   flex-direction: column;
 }
 
 /* Text Styling */
 
-.representatives-title {
+.representatives__title {
   font-size: 2.4rem;
   font-weight: 600;
   line-height: 1.5;
@@ -30,19 +30,19 @@
   margin-bottom: 1.6rem;
 }
 
-.representatives-description {
+.representatives__description {
   font-size: 1.6rem;
   line-height: 1.5;
   color: #333;
   padding-bottom: 2.4rem;
 }
 
-.table__wrapper {
+.representatives__table-wrapper {
   display: flex;
   justify-content: center;
 }
 
-/* Table */
+/* Table Styling */
 
 table {
   font-size: 1.6rem;

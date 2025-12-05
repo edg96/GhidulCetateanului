@@ -71,46 +71,6 @@
   transform: translateY(-1px);
 }
 
-/* Link */
-
-a {
-  position: relative;
-
-  font-weight: 600;
-  font-size: 1.6rem;
-  color: #636363;
-  text-decoration: none;
-
-  transition: color 0.3s ease-in-out;
-}
-
-a::before {
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-
-  height: 2px;
-  width: 100%;
-  border-radius: 3px;
-
-  content: "";
-
-  background-color: #18272f;
-
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.3s ease-in-out;
-}
-
-a:hover {
-  color: #ffd700;
-}
-
-a:hover::before {
-  transform: scaleX(1);
-  transform-origin: left;
-}
-
 /* Utility */
 
 .center-text {
